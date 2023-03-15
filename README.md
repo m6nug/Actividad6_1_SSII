@@ -1,4 +1,4 @@
-# Actividad6_1_SSII
+# Actividad 6.1 SSII
 *Manuel Gallego Bauer 1ºDAMP*
 ---
 ### Ejercicio 1
@@ -144,7 +144,7 @@ if [ -f "$1" ]; then
 elif [ -d "$1" ]; then
     echo "$1 es un directorio"
 else
-    echo "$1 no es un archivo ni un directoio"
+    echo "$1 no es un archivo ni un directorio"
     exit 1
 fi
 ```
@@ -156,11 +156,11 @@ fi
 permisos=$(ls -l "$1" | grep -o "^.\{1\}.\{3\}.\{3\}")
 
 if [ -z "$permisos" ]; then
-    echo "No se pudo obtener información de permisos para $1"
+    echo "No hay información de permisos de $1"
     exit 1
 fi
 
-echo "Permisos para $1: "
+echo "Permisos de $1: "
 echo "Lectura: $(echo $permisos | cut -c 2)"
 echo "Escritura: $(echo $permisos | cut -c 3)"
 echo "Ejecución: $(echo $permisos | cut -c 4)"
@@ -293,11 +293,11 @@ cat "$archivo"
 #!/bin/bash
 
 echo "Introduce un número: "
-read numero
+read num
 
-if grep -wq "$numero" numeros.txt
+if grep -wq "$num" numeros.txt
 then
-    echo "El número $numero se encuentra en el archivo numeros.txt"
+    echo "El número $num está en el archivo numeros.txt"
 else
-    echo "El número $numero no se encuentra en el archivo numeros.txt"
+    echo "El número $num no está en el archivo numeros.txt"
 fi
