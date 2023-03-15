@@ -175,3 +175,129 @@ do
     echo "Hola"
 done
 ```
+---
+### Ejercicio 12
+```bash
+#!/bin/bash
+
+    echo "Introduce una palabra: "
+    read palabra
+for i in {1..10}
+do
+    echo "La palabra introducida es: $palabra"
+done
+```
+---
+### Ejercicio 13
+```bash
+#!/bin/bash
+
+num_veces=$1
+
+for i in $(seq 1 $num_veces)
+do
+    echo "Hola"
+done
+```
+---
+### Ejercicio 14
+```bash
+#!/bin/bash
+
+n=$1
+
+for ((i=0; i<=n; i++))
+do
+    echo $i
+done
+```
+---
+### Ejercicio 15
+```bash
+#!/bin/bash
+
+n=$1
+suma=0
+
+for ((i=1; i<=n; i++))
+do
+    suma=$((suma+i))
+done
+
+echo "La suma de los números del 1 al $n es: $suma"
+```
+---
+### Ejercicio 16
+```bash
+#!/bin/bash
+
+$temp=$1
+$1=$2
+$2=$temp
+
+echo "El primer parámetro es $1 y el segundo es $2"
+```
+---
+### Ejercicio 17
+```bash
+#!/bin/bash
+
+while true; do
+    read -p "Introduce una palabra: " palabra
+    if [ "$palabra" == ":q" ]; then
+        break
+    fi
+    echo "La palabra introducida es: $palabra"
+done
+```
+---
+### Ejercicio 18
+```bash
+#!/bin/bash
+
+while true
+do
+    read palabra
+    if [ "$palabra" == ":q" ]
+    then
+        break
+    else
+        echo "$palabra" >> palabras.txt
+    fi
+done
+```
+---
+### Ejercicio 19
+```bash
+#!/bin/bash
+
+archivo="palabras2.txt"
+
+while true; do
+    read palabra
+
+    if [[ "$palabra" == ":q" ]]; then
+        break
+    fi
+
+    echo "$palabra" >> "$archivo"
+
+    sort -o "$archivo" "$archivo"
+done
+
+cat "$archivo"
+```
+---
+### Ejercicio 20
+```bash
+#!/bin/bash
+
+echo "Introduce un número: "
+read numero
+
+if grep -wq "$numero" numeros.txt
+then
+    echo "El número $numero se encuentra en el archivo numeros.txt"
+else
+    echo "El número $numero no se encuentra en el archivo numeros.txt"
+fi
