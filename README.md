@@ -2,7 +2,7 @@
 *Manuel Gallego Bauer 1ºDAMP*
 ---
 ### Ejercicio 1
-```
+```bash
 #!/bin/bash
 
 echo "Introduce un número: "
@@ -16,7 +16,7 @@ fi
 ```
 ---
 ### Ejercicio 2
-```
+```bash
 #!/bin/bash
 
 echo "Introduce un número: "
@@ -30,7 +30,7 @@ fi
 ```
 ---
 ### Ejercicio 3
-```
+```bash
 #!/bin/bash
 
 echo "Introduce un número: "
@@ -44,7 +44,7 @@ fi
 ```
 ---
 ### Ejercicio 4
-```
+```bash
 #!/bin/bash
 
 echo "Introduce un número: "
@@ -60,7 +60,7 @@ fi
 ```
 ---
 ### Ejercicio 5
-```
+```bash
 #!/bin/bash
 
 if [ $# -ne 3 ]; then
@@ -70,7 +70,7 @@ fi
 ```
 ---
 ### Ejercicio 6
-```
+```bash
 #!/bin/bash
 
 if [ $# -eq 2 ]; then
@@ -86,7 +86,7 @@ fi
 ```
 ---
 ### Ejercicio 7
-```
+```bash
 #!/bin/bash
 
 if [ $# -ne 3 ]; then
@@ -125,7 +125,7 @@ esac
 ```
 ---
 ### Ejercicio 8
-```
+```bash
 #!/bin/bash
 
 if [ -e "$1" ]; then
@@ -136,7 +136,7 @@ fi
 ```
 ---
 ### Ejercicio 9
-```
+```bash
 #!/bin/bash
 
 if [ -f "$1" ]; then
@@ -150,7 +150,7 @@ fi
 ```
 ---
 ### Ejercicio 10
-```
+```bash
 #!/bin/bash
 
 permisos=$(ls -l "$1" | grep -o "^.\{1\}.\{3\}.\{3\}")
@@ -167,7 +167,7 @@ echo "Ejecución: $(echo $permisos | cut -c 4)"
 ```
 ---
 ### Ejercicio 11
-```
+```bash
 #!/bin/bash
 
 for i in {1..50}
