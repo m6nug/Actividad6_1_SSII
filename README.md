@@ -1,4 +1,4 @@
-# Actividad 6.1 SSII
+# Actividad Bash
 *Manuel Gallego Bauer 1ºDAMP*
 ---
 ### Ejercicio 1
